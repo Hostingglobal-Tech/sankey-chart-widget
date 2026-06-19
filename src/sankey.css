@@ -1,0 +1,212 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    sans-serif;
+  background: #0b1120;
+  color: #e2e8f0;
+}
+
+.demo-page {
+  min-height: 100vh;
+  padding: 32px;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(14, 165, 233, 0.2), transparent 32%),
+    linear-gradient(135deg, #0f172a 0%, #111827 45%, #020617 100%);
+}
+
+.demo-shell {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.demo-hero {
+  margin-bottom: 22px;
+}
+
+.demo-hero h1 {
+  margin: 0 0 8px;
+  font-size: clamp(28px, 4vw, 46px);
+  letter-spacing: 0;
+}
+
+.demo-hero p {
+  max-width: 720px;
+  margin: 0;
+  color: #a7b6c9;
+  line-height: 1.6;
+}
+
+.sankey-widget {
+  overflow: hidden;
+  border-radius: 18px;
+  border: 1px solid;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.sankey-dark {
+  background: rgba(15, 23, 42, 0.84);
+  border-color: rgba(148, 163, 184, 0.24);
+  color: #e2e8f0;
+}
+
+.sankey-light {
+  background: #fff;
+  border-color: #dbe3ef;
+  color: #172033;
+}
+
+.sankey-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.24);
+}
+
+.sankey-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.sankey-header p {
+  margin: 3px 0 0;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.sankey-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.sankey-actions button {
+  border: 1px solid rgba(148, 163, 184, 0.25);
+  border-radius: 10px;
+  background: rgba(30, 41, 59, 0.7);
+  color: #cbd5e1;
+  padding: 7px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sankey-actions button.active,
+.sankey-actions button:hover {
+  background: rgba(34, 211, 238, 0.18);
+  border-color: rgba(34, 211, 238, 0.45);
+  color: #67e8f9;
+}
+
+.sankey-actions button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.sankey-light .sankey-actions button {
+  background: #f1f5f9;
+  color: #334155;
+}
+
+.sankey-light .sankey-actions button.active,
+.sankey-light .sankey-actions button:hover {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.sankey-error {
+  padding: 9px 16px;
+  border-bottom: 1px solid rgba(239, 68, 68, 0.28);
+  background: rgba(239, 68, 68, 0.1);
+  color: #fca5a5;
+  font-size: 13px;
+}
+
+.sankey-canvas-wrap {
+  width: 100%;
+  min-height: 480px;
+}
+
+.sankey-canvas {
+  display: block;
+  width: 100%;
+  height: 480px;
+}
+
+.sankey-table-wrap {
+  max-height: 220px;
+  overflow: auto;
+  border-top: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.sankey-table-wrap table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.sankey-table-wrap th,
+.sankey-table-wrap td {
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+  text-align: left;
+}
+
+.sankey-table-wrap th:last-child,
+.sankey-table-wrap td:last-child {
+  text-align: right;
+}
+
+.sankey-table-wrap th {
+  position: sticky;
+  top: 0;
+  background: rgba(15, 23, 42, 0.95);
+  color: #94a3b8;
+  font-weight: 800;
+}
+
+.sankey-light .sankey-table-wrap th {
+  background: #f8fafc;
+  color: #475569;
+}
+
+.sankey-table-wrap td:first-child,
+.sankey-table-wrap td:nth-child(3),
+.sankey-table-wrap td:last-child {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.stage-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 6px;
+  border-radius: 999px;
+}
+
+@media (max-width: 720px) {
+  .demo-page {
+    padding: 16px;
+  }
+
+  .sankey-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .sankey-canvas-wrap,
+  .sankey-canvas {
+    min-height: 420px;
+    height: 420px;
+  }
+}

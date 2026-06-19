@@ -1,0 +1,26 @@
+{
+  "name": "sankey-chart-widget",
+  "version": "1.0.0",
+  "description": "source-stage-target-value 데이터를 움직이는 Sankey chart로 보여주는 React 컴포넌트",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --host 0.0.0.0"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.11",
+    "typescript": "^5.7.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
